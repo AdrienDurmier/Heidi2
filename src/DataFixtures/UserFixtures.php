@@ -24,6 +24,8 @@ class UserFixtures extends Fixture
         // -- Amedia Solutions --
         $user = new User();
         $user->setEmail('a.durmier@gmail.com');
+        $user->setFirstname('Adrien');
+        $user->setLastname('Durmier');
         $user->addRole('ROLE_ADMIN');
         $user->setPassword($this->encoder->encodePassword($user, 'test'));
         $manager->persist($user);
